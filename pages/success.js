@@ -1,9 +1,11 @@
+import Script from 'next/script'
 import Layout from '../components/Layout'
 import { Grid, Col, Row, Text } from '@nextui-org/react'
 
 export default function Success({ query }) {
     return (
         <Layout>
+            <Script src='https://www.mercadopago.com/v2/security.js' view='' />
             <Grid.Container alignItems='center' css={{ height: '80vh' }}>
                 <Col>
                     <Row justify='center'>

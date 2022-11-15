@@ -1,7 +1,9 @@
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Card, Text, Row, Button } from '@nextui-org/react'
 
 export default function CardProduct({ product }) {
+    const router = useRouter()
+    
     return (
         <Card variant='flat' css={{ mw: '350px', margin: '5px' }}>
             <Card.Header>
@@ -23,9 +25,12 @@ export default function CardProduct({ product }) {
             </Row>
             <Card.Footer>
                 <Row justify='center'>
-                    <Link href={`/${encodeURIComponent(product.name)}`}>
-                        <Button color='gradient'>Comprar</Button>
-                    </Link>
+                    <Button
+                        color='gradient'
+                        onClick={() => router.push(encodeURIComponent(product.name))}
+                    >
+                        Comprar
+                    </Button>
                 </Row>
             </Card.Footer>
         </Card>

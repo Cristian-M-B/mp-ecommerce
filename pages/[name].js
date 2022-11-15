@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import Products from '../data/products'
 import Layout from '../components/Layout'
 import axios from 'axios'
@@ -19,8 +20,9 @@ export default function Item({ item }) {
 
     return (
         <Layout>
+            <Script src='https://www.mercadopago.com/v2/security.js' view='item' />
             {item
-                ? <Grid.Container>
+                ? <Grid.Container css={{height: '80vh'}}>
                     <Col span={6}>
                         <Image
                             src={item.image}
