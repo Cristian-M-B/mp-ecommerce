@@ -1,4 +1,4 @@
-let notifications = ['0001']
+const notifications = []
 
 export default function handler(req, res) {
     if (req.method === 'POST') {
