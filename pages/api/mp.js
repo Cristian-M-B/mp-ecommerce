@@ -46,7 +46,7 @@ export default function handler(req, res) {
                 pending: process.env.BACK_URL_PENDING,
                 failure: process.env.BACK_URL_FAILURE
             },
-            notification_url: 'https://tecnocommerce.vercel.app/api/notifications',
+            notification_url: process.env.NOTIFICATION_URL,
             integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
             external_reference: process.env.EMAIL_MP
         }
